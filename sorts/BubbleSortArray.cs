@@ -32,8 +32,8 @@ public class Program
 	}
 
 	public static string ArrayToString(int[] arr)
-		{
-			return "[" + string.Join(",",arr) + "]";
-		}
+	{
+		return "[" + string.Join(",",arr) + "]";
+	}
 
 }
