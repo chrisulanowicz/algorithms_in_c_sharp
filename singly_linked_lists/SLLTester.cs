@@ -16,6 +16,11 @@ namespace SLL
 			{
 				Console.WriteLine("Head is NULL!!!!!!!!!!!!!!!!!!!");
 			}
+			TestSLL.AddBack(5);
+			Console.WriteLine(TestSLL);
+			Console.WriteLine(TestSLL.Head);
+			Console.WriteLine(TestSLL.Head.Value);
+			Console.WriteLine(TestSLL.Head.Next);
 		}
 
 	}
