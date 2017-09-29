@@ -1,7 +1,7 @@
 namespace SLL
 {
 
-	public static class SLLExtensionMethods
+	public static class SLLExtensionMethodAddBack
 	{
 
 		public static void AddBack(this SinglyLinkedList linkedList, int val)
