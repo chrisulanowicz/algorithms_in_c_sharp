@@ -27,6 +27,12 @@ namespace SLL
 			Console.WriteLine(TestSLL.Head.Value);
 			Console.WriteLine(TestSLL.Head.Next);
 			Console.WriteLine(TestSLL.Head.Next.Value);
+			TestSLL.AppendValue(7,8);
+			Console.WriteLine(TestSLL);
+			Console.WriteLine(TestSLL.Head);
+			Console.WriteLine(TestSLL.Head.Value);
+			Console.WriteLine(TestSLL.Head.Next);
+			Console.WriteLine(TestSLL.Head.Next.Value);
 		}
 
 	}
