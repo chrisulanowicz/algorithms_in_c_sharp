@@ -10,6 +10,19 @@ namespace SLL
 			Head = null;
 		}
 
+		public string SLLToString()
+		{
+			string Result = "Head->";
+			Node Current = Head;
+			while(Current != null)
+			{
+				Result += Current.Value + "->";
+				Current = Current.Next;
+			}
+			Result += "null";
+			return Result;
+		}
+
 	}
 
 }
