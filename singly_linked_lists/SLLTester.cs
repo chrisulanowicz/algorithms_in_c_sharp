@@ -10,6 +10,7 @@ namespace SLL
 		{
 			SinglyLinkedList TestSLL = new SinglyLinkedList();
 			Console.WriteLine(TestSLL.SLLToString()); // Head->null
+			Console.WriteLine(TestSLL.Front()); // null
 			Console.WriteLine(TestSLL.Back()); // null
 			TestSLL.AddBack(5);
 			Console.WriteLine(TestSLL.SLLToString()); // Head->5->null
@@ -20,6 +21,7 @@ namespace SLL
 			TestSLL.PrependValue(6,5);
 			Console.WriteLine(TestSLL.SLLToString()); // Head->8->7->6->5->null
 			Console.WriteLine(TestSLL.Back()); // 5
+			Console.WriteLine(TestSLL.Front()); // 8
 		}
 
 	}
