@@ -12,6 +12,7 @@ namespace SLL
 			Console.WriteLine(TestSLL.SLLToString()); // Head->null
 			Console.WriteLine(TestSLL.Front()); // null
 			Console.WriteLine(TestSLL.Back()); // null
+			Console.WriteLine(TestSLL.Contains(5)); // false
 			TestSLL.AddBack(5);
 			Console.WriteLine(TestSLL.SLLToString()); // Head->5->null
 			TestSLL.AddFront(8);
@@ -22,6 +23,8 @@ namespace SLL
 			Console.WriteLine(TestSLL.SLLToString()); // Head->8->7->6->5->null
 			Console.WriteLine(TestSLL.Back()); // 5
 			Console.WriteLine(TestSLL.Front()); // 8
+			Console.WriteLine(TestSLL.Contains(5)); // true
+			Console.WriteLine(TestSLL.Contains(2)); // false
 		}
 
 	}
