@@ -10,10 +10,11 @@ namespace SLL
 		{
 			SinglyLinkedList TestSLL = new SinglyLinkedList();
 			Console.WriteLine(TestSLL.SLLToString()); // Head->null
-			Console.WriteLine(TestSLL.Front()); // null
-			Console.WriteLine(TestSLL.Back()); // null
-			Console.WriteLine(TestSLL.IsEmpty()); // False
-			Console.WriteLine(TestSLL.Contains(5)); // false
+			Console.WriteLine(TestSLL.Count()); // 0
+			// Console.WriteLine(TestSLL.Front()); // null
+			// Console.WriteLine(TestSLL.Back()); // null
+			// Console.WriteLine(TestSLL.IsEmpty()); // True
+			// Console.WriteLine(TestSLL.Contains(5)); // False
 			TestSLL.AddBack(5);
 			Console.WriteLine(TestSLL.SLLToString()); // Head->5->null
 			TestSLL.AddFront(8);
@@ -22,11 +23,12 @@ namespace SLL
 			Console.WriteLine(TestSLL.SLLToString()); // Head->8->7->5->null
 			TestSLL.PrependValue(6,5);
 			Console.WriteLine(TestSLL.SLLToString()); // Head->8->7->6->5->null
-			Console.WriteLine(TestSLL.Back()); // 5
-			Console.WriteLine(TestSLL.Front()); // 8
-			Console.WriteLine(TestSLL.Contains(5)); // true
-			Console.WriteLine(TestSLL.Contains(2)); // false
-			Console.WriteLine(TestSLL.IsEmpty()); // False
+			// Console.WriteLine(TestSLL.Back()); // 5
+			// Console.WriteLine(TestSLL.Front()); // 8
+			// Console.WriteLine(TestSLL.Contains(5)); // True
+			// Console.WriteLine(TestSLL.Contains(2)); // False
+			// Console.WriteLine(TestSLL.IsEmpty()); // False
+			Console.WriteLine(TestSLL.Count()); // 4
 		}
 
 	}
