@@ -29,6 +29,7 @@ namespace SLL
 			// Console.WriteLine(TestSLL.Contains(2)); // False
 			// Console.WriteLine(TestSLL.IsEmpty()); // False
 			Console.WriteLine(TestSLL.Count()); // 4
+			Console.WriteLine(TestSLL.MaxToBack().SLLToString());
 		}
 
 	}
