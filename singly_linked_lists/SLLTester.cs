@@ -15,6 +15,11 @@ namespace SLL
 			// Console.WriteLine(TestSLL.Back()); // null
 			// Console.WriteLine(TestSLL.IsEmpty()); // True
 			// Console.WriteLine(TestSLL.Contains(5)); // False
+			var results1 = TestSLL.MinMaxAverage();
+			foreach(var result in results1)
+			{
+				Console.WriteLine(result);
+			}
 			TestSLL.AddBack(5);
 			Console.WriteLine(TestSLL.SLLToString()); // Head->5->null
 			TestSLL.AddFront(8);
@@ -30,6 +35,11 @@ namespace SLL
 			// Console.WriteLine(TestSLL.IsEmpty()); // False
 			Console.WriteLine(TestSLL.Count()); // 4
 			Console.WriteLine(TestSLL.MaxToBack().SLLToString());
+			var results = TestSLL.MinMaxAverage();
+			foreach(var result in results)
+			{
+				Console.WriteLine(result);
+			}
 		}
 
 	}
