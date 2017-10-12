@@ -20,6 +20,9 @@ namespace SLL
 			{
 				Console.WriteLine(result);
 			}
+			var Removed1 = TestSLL.RemoveBack();
+			Console.WriteLine(Removed1); // null
+			Console.WriteLine(TestSLL.SLLToString());  // Head->null
 			TestSLL.AddBack(5);
 			Console.WriteLine(TestSLL.SLLToString()); // Head->5->null
 			TestSLL.AddFront(8);
@@ -40,6 +43,9 @@ namespace SLL
 			{
 				Console.WriteLine(result);
 			}
+			var Removed = TestSLL.RemoveBack();
+			Console.WriteLine(Removed.Value); // 8
+			Console.WriteLine(TestSLL.SLLToString());  // Head->7->6->5->null
 		}
 
 	}
