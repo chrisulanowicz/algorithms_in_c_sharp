@@ -14,6 +14,7 @@ namespace SLL
 			if(Current == null)
 			{
 				linkedlist.Head = NewNode;
+				return;
 			}
 			while(Current.Next != null && Current.Value != after)
 			{
