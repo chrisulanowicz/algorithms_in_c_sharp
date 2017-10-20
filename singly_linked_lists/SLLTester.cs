@@ -136,6 +136,24 @@ namespace SLL
 			SinglyLinkedList Split3 = Split2.SplitOnValue(8);
 			Console.WriteLine(Split2.SLLToString()); // Head->null
 			Console.WriteLine(Split3.SLLToString()); // Head->8->null
+
+			// SLLToArray tests
+			Console.WriteLine("\n***** ToArray Tests");
+			int[] Array1 = EmptyTestSLL.ToArray();
+			foreach(int val in Array1)
+			{
+				Console.WriteLine(val);
+			}
+			int[] Array2 = TestSLL1.ToArray();
+			foreach(int val in Array2)
+			{
+				Console.WriteLine(val);
+			}
+			int[] Array3 = TestSLL2.ToArray();
+			foreach(int val in Array3)
+			{
+				Console.WriteLine(val);
+			}
 		}
 
 	}
