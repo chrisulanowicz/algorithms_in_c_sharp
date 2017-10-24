@@ -31,7 +31,7 @@ namespace SLL
 			TestSLL.AddBack(5);
 			TestSLL.AddBack(2);
 			TestSLL.AddBack(4);
-			Console.WriteLine(TestSLL.SLLToString()); // Head->5->2->4->null
+			Console.WriteLine(TestSLL.Display()); // Head->5->2->4->null
 
 			// SLLAddFront tests
 			Console.WriteLine("\n***** AddFront Tests");
@@ -39,7 +39,7 @@ namespace SLL
 			TestSLL.AddFront(5);
 			TestSLL.AddFront(2);
 			TestSLL.AddFront(4);
-			Console.WriteLine(TestSLL.SLLToString()); // Head->4->2->5->null
+			Console.WriteLine(TestSLL.Display()); // Head->4->2->5->null
 
 			// SLLAppendValue tests
 			Console.WriteLine("\n***** AppendValue Tests");
@@ -48,7 +48,7 @@ namespace SLL
 			TestSLL.AppendValue(5, 4);
 			TestSLL.AppendValue(2, 4);
 			TestSLL.AppendValue(8, 4);
-			Console.WriteLine(TestSLL.SLLToString()); // Head->4->8->2->5->null
+			Console.WriteLine(TestSLL.Display()); // Head->4->8->2->5->null
 
 			// SLLBack tests
 			Console.WriteLine("\n***** Back Tests");
@@ -83,9 +83,9 @@ namespace SLL
 
 			// SLLMaxToBack tests
 			Console.WriteLine("\n***** MaxToBack Tests");
-			Console.WriteLine(EmptyTestSLL.MaxToBack().SLLToString()); // Head->null
-			Console.WriteLine(TestSLL.MaxToBack().SLLToString()); // Head->4->2->5->8->null
-			Console.WriteLine(TestSLL1.MaxToBack().SLLToString()); // Head->9->null
+			Console.WriteLine(EmptyTestSLL.MaxToBack().Display()); // Head->null
+			Console.WriteLine(TestSLL.MaxToBack().Display()); // Head->4->2->5->8->null
+			Console.WriteLine(TestSLL1.MaxToBack().Display()); // Head->9->null
 
 			// SLLMinMaxAverage tests
 			Console.WriteLine("\n***** MinMaxAverage Tests");
@@ -105,9 +105,9 @@ namespace SLL
 			TestSLL.PrependValue(1, 4);
 			TestSLL.PrependValue(7, 9);
 			TestSLL.PrependValue(6, 8);
-			Console.WriteLine(TestSLL.SLLToString()); // Head->1->4->2->5->6->8->7->null
+			Console.WriteLine(TestSLL.Display()); // Head->1->4->2->5->6->8->7->null
 			EmptyTestSLL.PrependValue(3, 5);
-			Console.WriteLine(EmptyTestSLL.SLLToString()); // Head->3->null
+			Console.WriteLine(EmptyTestSLL.Display()); // Head->3->null
 			EmptyTestSLL = new SinglyLinkedList(); // reset EmptyTestSLL
 
 			// SLLRemoveBack tests
@@ -116,7 +116,7 @@ namespace SLL
 			Console.WriteLine(RemovedEmpty); // nothing
 			var Removed1 = TestSLL.RemoveBack();
 			Console.WriteLine(Removed1); // node
-			Console.WriteLine(TestSLL.SLLToString()); // Head->1->4->2->5->6->8->null
+			Console.WriteLine(TestSLL.Display()); // Head->1->4->2->5->6->8->null
 
 			// SLLRemoveFront tests
 			Console.WriteLine("\n***** RemoveFront Tests");
@@ -124,18 +124,18 @@ namespace SLL
 			Console.WriteLine(RemovedEmpty2); // nothing
 			var Removed2 = TestSLL.RemoveFront();
 			Console.WriteLine(Removed2); // node
-			Console.WriteLine(TestSLL.SLLToString()); // Head->4->2->5->6->8->null
+			Console.WriteLine(TestSLL.Display()); // Head->4->2->5->6->8->null
 
 			// SLLSplitOnValue tests
 			Console.WriteLine("\n***** SplitOnValue Tests");
 			SinglyLinkedList Split1 = EmptyTestSLL.SplitOnValue(4);
-			Console.WriteLine(Split1.SLLToString()); // Head->null
+			Console.WriteLine(Split1.Display()); // Head->null
 			SinglyLinkedList Split2 = TestSLL.SplitOnValue(8);
-			Console.WriteLine(TestSLL.SLLToString()); // Head->4->2->5->6->null
-			Console.WriteLine(Split2.SLLToString()); // Head->8->null
+			Console.WriteLine(TestSLL.Display()); // Head->4->2->5->6->null
+			Console.WriteLine(Split2.Display()); // Head->8->null
 			SinglyLinkedList Split3 = Split2.SplitOnValue(8);
-			Console.WriteLine(Split2.SLLToString()); // Head->null
-			Console.WriteLine(Split3.SLLToString()); // Head->8->null
+			Console.WriteLine(Split2.Display()); // Head->null
+			Console.WriteLine(Split3.Display()); // Head->8->null
 
 			// SLLToArray tests
 			Console.WriteLine("\n***** ToArray Tests");
