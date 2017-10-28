@@ -126,12 +126,22 @@ namespace SLL
 			Console.WriteLine(Removed2); // node
 			Console.WriteLine(TestSLL.Display()); // Head->4->2->5->6->8->null
 
+			// SLLRemoveValue tests
+			Console.WriteLine("\n***** RemoveValue Tests");
+			var RemovedEmptyValue = EmptyTestSLL.RemoveValue(5);
+			Console.WriteLine(RemovedEmptyValue);  // nothing
+			var RemovedValueNotThere = TestSLL.RemoveValue(9);
+			Console.WriteLine(RemovedValueNotThere); // nothing
+			var RemovedValueMiddle = TestSLL.RemoveValue(5);
+			Console.WriteLine(RemovedValueMiddle); // node object
+			Console.WriteLine(TestSLL.Display()); // Head->4->2->6->8->null
+
 			// SLLSplitOnValue tests
 			Console.WriteLine("\n***** SplitOnValue Tests");
 			SinglyLinkedList Split1 = EmptyTestSLL.SplitOnValue(4);
 			Console.WriteLine(Split1.Display()); // Head->null
 			SinglyLinkedList Split2 = TestSLL.SplitOnValue(8);
-			Console.WriteLine(TestSLL.Display()); // Head->4->2->5->6->null
+			Console.WriteLine(TestSLL.Display()); // Head->4->2->6->null
 			Console.WriteLine(Split2.Display()); // Head->8->null
 			SinglyLinkedList Split3 = Split2.SplitOnValue(8);
 			Console.WriteLine(Split2.Display()); // Head->null
@@ -154,6 +164,7 @@ namespace SLL
 			{
 				Console.WriteLine(val);
 			}
+
 		}
 
 	}
