@@ -4,7 +4,7 @@ namespace SLL
 	public static class SLLExtensionMethodAddBack
 	{
 
-		public static void AddBack(this SinglyLinkedList linkedList, int val)
+		public static SinglyLinkedList AddBack(this SinglyLinkedList linkedList, int val)
 		{
 			Node NewNode = new Node(val);
 			Node Current = linkedList.Head;
@@ -20,6 +20,7 @@ namespace SLL
 				}
 				Current.Next = NewNode;
 			}
+			return linkedList;
 		}
 
 	}

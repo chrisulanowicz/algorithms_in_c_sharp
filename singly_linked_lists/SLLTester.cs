@@ -100,12 +100,21 @@ namespace SLL
 				Console.WriteLine(result);
 			}
 			
+			// SLLMinToFront tests
+			Console.WriteLine("\n***** MinToFront Tests");
+			EmptyTestSLL.MinToFront();
+			Console.WriteLine(EmptyTestSLL.Display()); // Head->null
+			TestSLL.MinToFront();
+			Console.WriteLine(TestSLL.Display()); // Head->2->4->5->8->null
+			TestSLL1.MinToFront();
+			Console.WriteLine(TestSLL1.Display()); // Head->9->null
+
 			// SLLPrependValue tests
 			Console.WriteLine("\n***** PrependValue Tests");
 			TestSLL.PrependValue(1, 4);
 			TestSLL.PrependValue(7, 9);
 			TestSLL.PrependValue(6, 8);
-			Console.WriteLine(TestSLL.Display()); // Head->1->4->2->5->6->8->7->null
+			Console.WriteLine(TestSLL.Display()); // Head->2->1->4->5->6->8->7->null
 			EmptyTestSLL.PrependValue(3, 5);
 			Console.WriteLine(EmptyTestSLL.Display()); // Head->3->null
 			EmptyTestSLL = new SinglyLinkedList(); // reset EmptyTestSLL
@@ -116,7 +125,7 @@ namespace SLL
 			Console.WriteLine(RemovedEmpty); // nothing
 			var Removed1 = TestSLL.RemoveBack();
 			Console.WriteLine(Removed1); // node
-			Console.WriteLine(TestSLL.Display()); // Head->1->4->2->5->6->8->null
+			Console.WriteLine(TestSLL.Display()); // Head->2->1->4->5->6->8->null
 
 			// SLLRemoveFront tests
 			Console.WriteLine("\n***** RemoveFront Tests");
@@ -124,7 +133,32 @@ namespace SLL
 			Console.WriteLine(RemovedEmpty2); // nothing
 			var Removed2 = TestSLL.RemoveFront();
 			Console.WriteLine(Removed2); // node
-			Console.WriteLine(TestSLL.Display()); // Head->4->2->5->6->8->null
+			Console.WriteLine(TestSLL.Display()); // Head->1->4->5->6->8->null
+
+			// SLLRemoveNegatives tests
+			Console.WriteLine("\n***** RemoveNegatives Tests");
+			EmptyTestSLL.RemoveNegatives();
+			Console.WriteLine(EmptyTestSLL.Display()); // Head->null
+			TestSLL.RemoveNegatives();
+			Console.WriteLine(TestSLL.Display()); // Head->1->4->5->6->8->null
+			SinglyLinkedList NegativeTestSLL = new SinglyLinkedList();
+			NegativeTestSLL.AddBack(-3).AddBack(-5).AddBack(-8);
+			SinglyLinkedList PartialFrontNegativesSLL = new SinglyLinkedList();
+			PartialFrontNegativesSLL.AddBack(-2).AddBack(-5).AddBack(3).AddBack(8);
+			SinglyLinkedList PartialMiddleNegativesSLL = new SinglyLinkedList();
+			PartialMiddleNegativesSLL.AddBack(4).AddBack(5).AddBack(-2).AddBack(-4).AddBack(8).AddBack(9);
+			SinglyLinkedList PartialBackNegativesSLL = new SinglyLinkedList();
+			PartialBackNegativesSLL.AddBack(2).AddBack(4).AddBack(-6).AddBack(-8);
+			SinglyLinkedList PartialMixedNegativesSLL = new SinglyLinkedList();
+			PartialMixedNegativesSLL.AddBack(4).AddBack(-6).AddBack(8).AddBack(-9).AddBack(5);
+			PartialFrontNegativesSLL.RemoveNegatives();
+			PartialMiddleNegativesSLL.RemoveNegatives();
+			PartialBackNegativesSLL.RemoveNegatives();
+			PartialMixedNegativesSLL.RemoveNegatives();
+			Console.WriteLine(PartialFrontNegativesSLL.Display()); // Head->3->8->null
+			Console.WriteLine(PartialMiddleNegativesSLL.Display()); // Head->4->5->8->9->null
+			Console.WriteLine(PartialBackNegativesSLL.Display()); // Head->2->4->null
+			Console.WriteLine(PartialMixedNegativesSLL.Display()); // Head->4->8->5->null
 
 			// SLLRemoveValue tests
 			Console.WriteLine("\n***** RemoveValue Tests");
@@ -134,14 +168,14 @@ namespace SLL
 			Console.WriteLine(RemovedValueNotThere); // nothing
 			var RemovedValueMiddle = TestSLL.RemoveValue(5);
 			Console.WriteLine(RemovedValueMiddle); // node object
-			Console.WriteLine(TestSLL.Display()); // Head->4->2->6->8->null
+			Console.WriteLine(TestSLL.Display()); // Head->1->4->6->8->null
 
 			// SLLSplitOnValue tests
 			Console.WriteLine("\n***** SplitOnValue Tests");
 			SinglyLinkedList Split1 = EmptyTestSLL.SplitOnValue(4);
 			Console.WriteLine(Split1.Display()); // Head->null
 			SinglyLinkedList Split2 = TestSLL.SplitOnValue(8);
-			Console.WriteLine(TestSLL.Display()); // Head->4->2->6->null
+			Console.WriteLine(TestSLL.Display()); // Head->1->4->6->null
 			Console.WriteLine(Split2.Display()); // Head->8->null
 			SinglyLinkedList Split3 = Split2.SplitOnValue(8);
 			Console.WriteLine(Split2.Display()); // Head->null
@@ -165,14 +199,7 @@ namespace SLL
 				Console.WriteLine(val);
 			}
 
-			// SLLMinToFront tests
-			Console.WriteLine("\n***** MinToFront Tests");
-			EmptyTestSLL.MinToFront();
-			Console.WriteLine(EmptyTestSLL.Display()); // Head->null
-			TestSLL.MinToFront();
-			Console.WriteLine(TestSLL.Display()); // Head->2->4->6->null
-			TestSLL1.MinToFront();
-			Console.WriteLine(TestSLL1.Display()); // Head->9->null
+			
 
 		}
 
