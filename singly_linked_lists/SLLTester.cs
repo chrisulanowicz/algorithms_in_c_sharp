@@ -165,6 +165,15 @@ namespace SLL
 				Console.WriteLine(val);
 			}
 
+			// SLLMinToFront tests
+			Console.WriteLine("\n***** MinToFront Tests");
+			EmptyTestSLL.MinToFront();
+			Console.WriteLine(EmptyTestSLL.Display()); // Head->null
+			TestSLL.MinToFront();
+			Console.WriteLine(TestSLL.Display()); // Head->2->4->6->null
+			TestSLL1.MinToFront();
+			Console.WriteLine(TestSLL1.Display()); // Head->9->null
+
 		}
 
 	}
