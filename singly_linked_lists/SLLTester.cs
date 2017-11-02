@@ -69,6 +69,11 @@ namespace SLL
 			Console.WriteLine(TestSLL1.Count()); // 1
 			Console.WriteLine(TestSLL2.Count()); // 4
 
+			// SLLCreate test
+			Console.WriteLine("\n***** Create Tests");
+			SinglyLinkedList UserCreatedList = new SinglyLinkedList().Create();
+			Console.WriteLine(UserCreatedList.Display());
+
 			// SLLFront tests
 			Console.WriteLine("\n***** Front Tests");
 			Console.WriteLine(EmptyTestSLL.Back()); // null
