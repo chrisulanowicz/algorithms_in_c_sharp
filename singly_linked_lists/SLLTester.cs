@@ -23,8 +23,10 @@ namespace SLL
 			TestSLL2.AddBack(6);
 			TestSLL2.AddBack(5);
 
-			// List to be used when manipulating SLL
+			// Lists to be used when manipulating SLL
 			SinglyLinkedList TestSLL = new SinglyLinkedList();
+			SinglyLinkedList TestSLLVar = new SinglyLinkedList();
+			SinglyLinkedList TestSLLVar2 = new SinglyLinkedList();
 
 			// SLLAddBack tests
 			Console.WriteLine("\n***** AddBack Tests");
@@ -55,6 +57,17 @@ namespace SLL
 			Console.WriteLine(EmptyTestSLL.Back()); // null
 			Console.WriteLine(TestSLL1.Back()); // 9
 			Console.WriteLine(TestSLL2.Back()); // 5
+
+			// SLLConcat tests
+			Console.WriteLine("\n***** Concat Tests");
+			TestSLLVar.AddBack(2).AddBack(4).AddBack(6);
+			TestSLLVar2.AddBack(8).AddBack(10).AddBack(12);
+			Console.WriteLine("First List: {0}", TestSLLVar.Display());
+			Console.WriteLine("Second List: {0}", TestSLLVar2.Display());
+			TestSLLVar.Concat(TestSLLVar2);
+			Console.WriteLine("New Concatted List: {0}", TestSLLVar.Display());
+			Console.WriteLine("Second List: {0}", TestSLLVar2.Display());
+
 
 			// SLLContains tests
 			Console.WriteLine("\n***** Contains Tests");
