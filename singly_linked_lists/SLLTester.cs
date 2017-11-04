@@ -62,11 +62,11 @@ namespace SLL
 			Console.WriteLine("\n***** Concat Tests");
 			TestSLLVar.AddBack(2).AddBack(4).AddBack(6);
 			TestSLLVar2.AddBack(8).AddBack(10).AddBack(12);
-			Console.WriteLine("First List: {0}", TestSLLVar.Display());
-			Console.WriteLine("Second List: {0}", TestSLLVar2.Display());
+			Console.WriteLine("First List: {0}", TestSLLVar.Display()); // Head->2->4->6->null
+			Console.WriteLine("Second List: {0}", TestSLLVar2.Display()); // Head->8->10->12->null
 			TestSLLVar.Concat(TestSLLVar2);
-			Console.WriteLine("New Concatted List: {0}", TestSLLVar.Display());
-			Console.WriteLine("Second List: {0}", TestSLLVar2.Display());
+			Console.WriteLine("New Concatted List: {0}", TestSLLVar.Display()); // Head->2->4->6->8->10->12->null
+			Console.WriteLine("Second List: {0}", TestSLLVar2.Display()); // Head->null
 
 
 			// SLLContains tests
@@ -126,6 +126,25 @@ namespace SLL
 			Console.WriteLine(TestSLL.Display()); // Head->2->4->5->8->null
 			TestSLL1.MinToFront();
 			Console.WriteLine(TestSLL1.Display()); // Head->9->null
+
+			// SLLPartition tests
+			Console.WriteLine("\n***** Partition Tests");
+			EmptyTestSLL.Partition(4);
+			Console.WriteLine(EmptyTestSLL.Display()); // Head->null
+			TestSLL1.Partition(9);
+			Console.WriteLine(TestSLL1.Display()); // Head->9->null
+			TestSLL1.Partition(23);
+			Console.WriteLine(TestSLL1.Display()); // Head->9->null
+			TestSLLVar.Partition(6);
+			Console.WriteLine(TestSLLVar.Display()); // Head->2->4->6->8->10->12->null
+			TestSLLVar2.AddBack(2).AddBack(4).AddBack(3).AddBack(1).AddBack(6);
+			TestSLLVar2.Partition(4);
+			Console.WriteLine(TestSLLVar2.Display()); // Head->1->3->2->4->6->null
+			TestSLLVar2.AddFront(8);
+			TestSLLVar2.AddFront(12); // Will look like this now: Head->12->8->1->3->2->4->6->null
+			TestSLLVar2.Partition(4);
+			Console.WriteLine(TestSLLVar2.Display()); // Head->2->3->1->4->12->8->6->null
+
 
 			// SLLPrependValue tests
 			Console.WriteLine("\n***** PrependValue Tests");
