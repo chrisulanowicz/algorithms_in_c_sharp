@@ -207,6 +207,13 @@ namespace SLL
 			Console.WriteLine(RemovedValueMiddle); // node object
 			Console.WriteLine(TestSLL.Display()); // Head->1->4->6->8->null
 
+			// SLLSecondToLastValue tests
+			Console.WriteLine("\n***** SecondToLastValue Tests");
+			Console.WriteLine(EmptyTestSLL.SecondToLastValue()); // null
+			Console.WriteLine(TestSLL1.SecondToLastValue()); // null
+			Console.WriteLine(TestSLL2.SecondToLastValue()); // 6
+			Console.WriteLine(TestSLL.SecondToLastValue()); // 6
+
 			// SLLSplitOnValue tests
 			Console.WriteLine("\n***** SplitOnValue Tests");
 			SinglyLinkedList Split1 = EmptyTestSLL.SplitOnValue(4);
