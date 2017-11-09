@@ -76,6 +76,19 @@ namespace SLL
 			Console.WriteLine(TestSLL2.Contains(6)); // True
 			Console.WriteLine(TestSLL2.Contains(1)); // False
 
+			// SLLCopy tests
+			Console.WriteLine("\n***** Copy Tests");
+			SinglyLinkedList CopiedEmptyList = EmptyTestSLL.Copy();
+			Console.WriteLine(CopiedEmptyList.Display()); // Head->null
+			SinglyLinkedList CopiedSingleNodeList = TestSLL1.Copy();
+			Console.WriteLine(CopiedSingleNodeList.Display()); // Head->9->null
+			SinglyLinkedList CopiedLongerList = TestSLL2.Copy();
+			Console.WriteLine(CopiedLongerList.Display()); // Head->8->7->6->5->null
+			// to verify these are copies I'll modify the copied list and check against original
+			CopiedLongerList.RemoveValue(6);
+			Console.WriteLine(CopiedLongerList.Display()); // Head->8->7->5->null
+			Console.WriteLine(TestSLL2.Display()); // Head->8->7->6->5->null
+
 			// SLLCount tests
 			Console.WriteLine("\n***** Count Tests");
 			Console.WriteLine(EmptyTestSLL.Count()); // 0
