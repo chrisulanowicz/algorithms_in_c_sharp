@@ -67,6 +67,7 @@ namespace SLL
 			TestSLLVar.Concat(TestSLLVar2);
 			Console.WriteLine("New Concatted List: {0}", TestSLLVar.Display()); // Head->2->4->6->8->10->12->null
 			Console.WriteLine("Second List: {0}", TestSLLVar2.Display()); // Head->null
+			TestSLLVar = new SinglyLinkedList(); // clear out for later user
 
 
 			// SLLContains tests
@@ -95,10 +96,22 @@ namespace SLL
 			Console.WriteLine(TestSLL1.Count()); // 1
 			Console.WriteLine(TestSLL2.Count()); // 4
 
-			// SLLCreate test
+			// SLLCreate tests
 			Console.WriteLine("\n***** Create Tests");
 			SinglyLinkedList UserCreatedList = new SinglyLinkedList().Create();
 			Console.WriteLine(UserCreatedList.Display());
+
+			// SLLFilterHighLow tests
+			Console.WriteLine("\n***** Filter High/Low Tests");
+			Console.WriteLine(EmptyTestSLL.FilterHighLow(3,9).Display()); // Head->null
+			Console.WriteLine(TestSLL1.FilterHighLow(3,12).Display()); // Head->9->null
+			Console.WriteLine(TestSLL2.FilterHighLow(3,10).Display()); // Head->8->7->6->5->null
+			TestSLLVar.AddBack(2).AddBack(4).AddBack(6).AddBack(8);
+			Console.WriteLine(TestSLLVar.FilterHighLow(3,7).Display()); // Head->4->6->null
+			Console.WriteLine(TestSLLVar.FilterHighLow(4,2).Display()); // Head->null
+			TestSLLVar2.AddBack(1).AddBack(3).AddBack(5).AddBack(7).AddBack(9);
+			Console.WriteLine(TestSLLVar2.FilterHighLow(8,12).Display()); // Head->9->null
+			Console.WriteLine(TestSLLVar2.FilterHighLow(4,6).Display()); // Head->null
 
 			// SLLFront tests
 			Console.WriteLine("\n***** Front Tests");
