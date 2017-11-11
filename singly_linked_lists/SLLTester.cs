@@ -161,8 +161,9 @@ namespace SLL
 			Console.WriteLine(TestSLL1.Display()); // Head->9->null
 			TestSLL1.Partition(23);
 			Console.WriteLine(TestSLL1.Display()); // Head->9->null
+			TestSLLVar.AddBack(12).AddBack(8).AddBack(4).AddBack(2).AddBack(6).AddBack(10);
 			TestSLLVar.Partition(6);
-			Console.WriteLine(TestSLLVar.Display()); // Head->2->4->6->8->10->12->null
+			Console.WriteLine(TestSLLVar.Display()); // Head->2->4->6->12->8->10->null
 			TestSLLVar2.AddBack(2).AddBack(4).AddBack(3).AddBack(1).AddBack(6);
 			TestSLLVar2.Partition(4);
 			Console.WriteLine(TestSLLVar2.Display()); // Head->1->3->2->4->6->null
@@ -232,6 +233,15 @@ namespace SLL
 			var RemovedValueMiddle = TestSLL.RemoveValue(5);
 			Console.WriteLine(RemovedValueMiddle); // node object
 			Console.WriteLine(TestSLL.Display()); // Head->1->4->6->8->null
+
+			// SLLSecondLargest tests
+			Console.WriteLine("\n***** SecondLargest Tests");
+			Console.WriteLine(EmptyTestSLL.SecondLargest()); // null (nothing)
+			Console.WriteLine(TestSLL1.SecondLargest()); // null (nothing)
+			Console.WriteLine(TestSLL2.SecondLargest()); // 7
+			Console.WriteLine(TestSLL.SecondLargest()); // 6
+			Console.WriteLine(TestSLLVar.SecondLargest()); // 10
+			Console.WriteLine(TestSLLVar2.SecondLargest()); // 8
 
 			// SLLSecondToLastValue tests
 			Console.WriteLine("\n***** SecondToLastValue Tests");
