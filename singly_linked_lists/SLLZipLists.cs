@@ -44,14 +44,6 @@ namespace SLL
 					CurrentFirst = TempFirst;
 					CurrentSecond = TempSecond;
 				}
-				// if(CurrentFirst == null && CurrentSecond != null)
-				// {
-				// 	CurrentFirst.Ne
-				// }
-				// if(CurrentSecond == null && CurrentFirst != null)
-				// {
-				// 	// Do nothing here
-				// }
 			}
 
 			return ZippedList;
