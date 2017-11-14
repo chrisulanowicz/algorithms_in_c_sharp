@@ -279,8 +279,15 @@ namespace SLL
 				Console.WriteLine(val);
 			}
 
+			// SLLZipLists tests
+			Console.WriteLine("\n***** ZipLists Tests");
+			SinglyLinkedList ZippedList1 = EmptyTestSLL.ZipLists(TestSLL1);
+			Console.WriteLine(ZippedList1.Display()); // Head->9->null
+			SinglyLinkedList ZippedList2 = Split3.ZipLists(TestSLL);
+			Console.WriteLine(ZippedList2.Display()); // Head->8->1->4->6->null
+			SinglyLinkedList ZippedList3 = TestSLLVar2.ZipLists(TestSLLVar);
+			Console.WriteLine(ZippedList3.Display()); // Head->2->2->3->4->1->6->4->12->12->8->8->10->6->null
 			
-
 		}
 
 	}
