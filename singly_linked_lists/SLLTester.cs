@@ -101,6 +101,19 @@ namespace SLL
 			SinglyLinkedList UserCreatedList = new SinglyLinkedList().Create();
 			Console.WriteLine(UserCreatedList.Display());
 
+
+			// SLLDeDupe tests
+			Console.WriteLine("\n***** DeDupe Tests");
+			EmptyTestSLL.DeDupe();
+			Console.WriteLine(EmptyTestSLL.Display()); // Head->null
+			TestSLL1.DeDupe();
+			Console.WriteLine(TestSLL1.Display()); // Head->9->null
+			TestSLL2.DeDupe();
+			Console.WriteLine(TestSLL2.Display()); // Head->8->7->6->5->null
+			TestSLLVar.AddBack(2).AddBack(2).AddBack(3).AddBack(3).AddBack(3).AddBack(4).AddBack(5).AddBack(6).AddBack(6);
+			TestSLLVar.DeDupe();
+			Console.WriteLine(TestSLLVar.Display()); // Head->2->3->4->5->6->null
+
 			// SLLFilterHighLow tests
 			Console.WriteLine("\n***** Filter High/Low Tests");
 			Console.WriteLine(EmptyTestSLL.FilterHighLow(3,9).Display()); // Head->null
@@ -287,7 +300,7 @@ namespace SLL
 			Console.WriteLine(ZippedList2.Display()); // Head->8->1->4->6->null
 			SinglyLinkedList ZippedList3 = TestSLLVar2.ZipLists(TestSLLVar);
 			Console.WriteLine(ZippedList3.Display()); // Head->2->2->3->4->1->6->4->12->12->8->8->10->6->null
-			
+
 		}
 
 	}
